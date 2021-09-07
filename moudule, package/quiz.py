@@ -50,6 +50,7 @@
 
 # import datetime
 # birthday = datetime.datetime(2004, 10, 14)
+# now = datetime.datetime.now()
 # birthday = datetime.datetime.now()
 # print(now - birthday)
 
