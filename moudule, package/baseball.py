@@ -11,13 +11,15 @@ while True:
     except ValueError:
         continue
     # 길이가 3이 아닐 떄 에러 처리
-    if len(player) != 3:
-        raise InvalidCountError("3자리가 아닙니다.")       # raise 는 발생시키다
+    if len(player) != len(answer):
+        # raise InvalidCountError("3자리가 아닙니다.")       # raise 는 발생시키다
+        print(f'입력한 숫자의 개수가 정답과 다릅니다.정답: {len(answer)} 글자')
+        continue
 
 #  strike, ball 확인하자
     strike, ball = check(answer, player)
 # 출력하자
-    print(f'{player}\tstricke: {strike}\tball: {ball}')
+    print(f'{player}\tstrick: {strike}\tball: {ball}')
 # strike 가 3일 때, 나가자
     if strike == 3:
         break
